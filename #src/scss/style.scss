@@ -1,0 +1,326 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,,800');
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "Montserrat";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1500;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: #000;
+	font-size: 14px;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery";
+//@import "pagging";
+@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	height: 7243px;
+}
+//===================================================================================================================================
+.firstscreen {
+
+	&__offer {
+		color: #000000;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 40px;
+		text-align: center;
+		letter-spacing: 0.48px;
+		padding: 0px 0px 26px 0px;
+	}
+
+	&__offerdown {
+
+	}
+	&__button{
+	}
+	&__image img{
+		position: relative;
+		bottom: 100px;
+		width: 100%;
+	}
+}
+
+
+.imagewithtext {
+	text-align: center;
+	font-size: 18px;
+	font-size: 14px;
+	&__text1 {
+		opacity: 0.25;
+		color: #4b5863;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: 0.18px;
+	}
+	&__button{
+		
+	}
+}
+
+.button a{
+	position: relative;
+	top: 30px;
+	padding: 15px 0px 0px 0px;
+	width: 229px;
+	height: 51px;
+	display: inline-block;
+	color: #43a9ff;
+	font-weight: 700;
+	line-height: 18px;
+	letter-spacing: 0.14px;
+	box-shadow: 0 0 15px rgba(17, 83, 145, 0.35);
+	border-radius: 22px;
+}
+
+.texts {
+	text-align: center;
+	&__first {
+	opacity: 0.25;
+	color: #4b5863;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: 0.18px;
+	padding: 0px 0px 30px 0px;
+	}
+
+	&__second {
+		display: inline-block;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 40px;
+		letter-spacing: 0.48px;
+	}
+}
+.list {
+	padding: 60px 0px 0px 0px;
+	display: flex;
+	justify-content: space-around;
+	@media (max-width: $md3+px){
+		flex-direction: column;
+		align-items: center;
+		padding: 0px 0px 35px 0px;
+	}
+	&__block {
+		width: 228px;
+		text-align: center;
+
+	}
+
+	&__image {
+		padding: 0px 0px 20px 0px;
+	}
+
+	&__paragraph {
+		padding: 0px 0px 20px 0px;
+		color: #000000;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: 0.18px;
+	}
+
+	&__text {
+		opacity: 0.35;
+		color: #4b5863;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.14px;
+	}
+}
+.button {
+	text-align: center;
+}
+
+.thirdscreen {
+	padding: 100px 0px 0px 0px;
+	&__up {
+
+	}
+
+	&__down {
+	}
+}
+.up {
+	display: flex;
+	&__image {
+
+	}
+
+	&__text {
+		padding: 192px 0px 0px 130px;
+		width: 883px;
+		height: 562px;
+		background-color: #f7f8fb;
+	}
+
+	&__paragraph {
+		color: #000000;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 18px;
+		text-align: left;
+		letter-spacing: 0.48px;
+		line-height: 50px;
+	}
+
+	&__description {
+		padding: 15px 0px 0px 0px;
+		opacity: 0.35;
+		color: #4b5863;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 36px;
+		text-align: left;
+		letter-spacing: 0.16px;
+
+	}
+}
+.down {
+display: flex;
+	&__text {
+		padding: 150px 0px 0px 130px;
+		background-color: #f7f8fb;
+		width: 1120px;
+		height: 492px;
+	}
+
+	&__paragraph {
+		color: #000000;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 18px;
+		text-align: left;
+		letter-spacing: 0.48px;
+		line-height: 50px;
+	}
+
+	&__description {
+		margin: 15px 0px 0px 0px;
+		opacity: 0.35;
+		color: #4b5863;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 36px;
+		text-align: left;
+		letter-spacing: 0.16px;
+	}
+}
+
+.thirdscreen {
+
+	&__footer {
+		position: relative;
+	}
+
+	&__left {
+
+	}
+
+	&__snowflake {
+		position: absolute;
+		z-index: 0;
+	}
+	&__appscreen {
+		position: absolute;
+		top:50px;
+		left: 340px;
+	}
+
+	&__right {
+		position: absolute;
+		top: 0;
+		left: 1000px;
+		padding: 300px 0px 0px 130px;
+	}
+}
+
+
+.paragraphblue{
+	color: #43a9ff;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: left;
+	letter-spacing: 0.48px;
+	line-height: 50px;
+}
+
+
+
+img {
+	max-width: 100%;
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+/* flex: 1 1 30%;  grow | shrink | basis */
+
+/* flex: 0 1 33.333%; */
